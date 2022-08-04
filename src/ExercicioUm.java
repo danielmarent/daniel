@@ -48,19 +48,19 @@ public class ExercicioUm {
                 break;
             // 5) Crie um programa que calcule _bhaskara_
             case 5:
-            System.out.println(bhaskara(2,4,6));
+            //System.out.println(bhaskara(2,4,6));
                 break;
             // 6) Crie um programa que calcule a velocidade média de uma viagem (`distancia (km) / tempo (h)`)
             case 6:
-            // System.out.println(mediaViagem(distancia: 100, tempo: 140));
+            System.out.println(mediaViagem(100,60));
                 break;
             // 7) Crie um programa que calcule o percentual de imposto pago (`faturamento \ qtd imposto`)
             case 7:
-            // System.out.println(percentualImposto(faturamento: 1000, qtdImposto: 100));
+            //System.out.println(percentualImposto(faturamento: 1000, qtdImposto: 100));
                 break;
             // 8) Crie um programa que teste se um valor é par ou ímpar
             case 8:
-            // System.out.println(parOuImpar(valor: 5));
+            System.out.println(parOuImpar(55));
                 break;
             // 9) Crie um programa que compare dois valores Strings
             case 9:
@@ -127,13 +127,14 @@ public class ExercicioUm {
     public static double[] bhaskara(int a, int b, int c) {
         //double delta = (b *b)-4 * a * c;
         //double[] bhaskara = new double
-        
-        //System.out.println("o resultado da formula e " + bhaskara)
        
         return new double[2];
     }
 
     public static double mediaViagem(double distancia, double tempo) {
+        System.out.println("mediaViagem");
+        double mediaViagem = (distancia * tempo)/60;
+        System.out.println("a media da viagem e " + mediaViagem);   
         return 0;
     }
 
@@ -142,7 +143,14 @@ public class ExercicioUm {
     }
 
     public static boolean parOuImpar(int valor) {
+    if (valor % 2 == 0) {
+            System.out.println("o valor final é par ");   
+            return true;
+        }
+
+        System.out.println("o valor final é impar ");   
         return false;
+
     }
 
     public static boolean compareString(String stringUm, String stringDois) {
