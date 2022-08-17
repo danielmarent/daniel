@@ -64,7 +64,7 @@ public class ExercicioUm {
                 break;
             // 9) Crie um programa que compare dois valores Strings
             case 9:
-            // System.out.println(compareString(stringUm: 5, stringDois: 6))
+            System.out.println(compareString("5","6"));
                 break;
             // 10) Crie um programa que tenha uma variável com ponto em String e converta seu valor para inteiro
             case 10:
@@ -154,7 +154,8 @@ public class ExercicioUm {
     }
 
     public static boolean compareString(String stringUm, String stringDois) {
-        return false;
+        boolean compare = stringDois.equals(stringUm);
+        return compare;
     }
 
     public static int convertString(String valor) {
@@ -163,7 +164,7 @@ public class ExercicioUm {
 
     public static double percentualImpostoSalario(double salario) {
         System.out.println("volume");
-        double volume = ();
+        double volume = 0;
         System.out.println("o volume total e " + volume);   
         return -1;
     }
