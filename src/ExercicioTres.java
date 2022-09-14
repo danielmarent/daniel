@@ -47,7 +47,9 @@ public class ExercicioTres {
                 break;
             // 2) Crie um programa que leia e imprima no console todas as linhas de um arquivo de texto.
             case 2:
-                // lerArquivoTexto(String arquivo);
+            String arquivo = "";
+        
+            lerArquivoTexto(arquivo);  
                 break;
             // 3) Crie um programa que receba como entrada da classe Main dois valores numéricos e calcule as operações básicas com eles.
             case 3:
@@ -108,9 +110,34 @@ public class ExercicioTres {
     }       
 
     public static void lerArquivoTexto(String arquivo) {
-        
-    }
+        try{
+            FileReader arquivoLeitura = new FileReader("teste.txt");
+            BufferedReader buffer = new BufferedReader(arquivoLeitura);
+            int contador = 0;
+            while (buffer.readLine() != null) {
+                contador++;
+            }
+            buffer.close();
+            String[] linha = new String[contador]; // [0,0,0,0,0,0,0]
+            arquivoLeitura = new FileReader("teste.txt");
+            buffer = new BufferedReader(arquivoLeitura);
+            contador = 0;
+            String linhaArquivo = "";
+            while (linhaArquivo != null) {
+                linhaArquivo = buffer.readLine();
+                if (linhaArquivo != null) {
+                    linha[contador] = linhaArquivo;
 
+                    contador++;
+          } }
+            buffer.close();
+            System.out.println(contador);
+            for (int i = 0; i<contador; i++){
+                System.out.println(linha[i]);
+            }
+        }catch(Exception e){
+    }
+}
     public static int[] operacoesBasicas(int numeroUm, int numeroDois) {
         return new int[4];
     }
