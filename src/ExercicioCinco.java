@@ -25,7 +25,7 @@ public class ExercicioCinco {
         switch (menu) {
             // 1) Crie uma classe que represente uma Pessoa, devendo ter as propriedades Nome, Peso, Altura e Data de Nascimento e o método IMC, que retornará o valor do IMC.
             case 1:
-                // criarPessoa();
+                 criarPessoa();
                 break;
             /* 2) Crie um programa que receba a pessoa criada e verifique qual o IMC.
 
@@ -65,10 +65,34 @@ public class ExercicioCinco {
     }
 
     public static void criarPessoa() {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.println("Informe o nome:");
+            String nome = scanner.next();
+            System.out.println("Informe a peso:");
+            double peso = scanner.nextDouble();
+            System.out.println("Informe o altura:");
+            double altura = scanner.nextDouble();
+            System.out.println("Informe o dataNascimento:");
+            String dataNascimento = scanner.next();
+
+            Pessoa pessoa = new Pessoa (nome,peso,altura,dataNascimento);
+            System.out.println(
+                "Nome: " + pessoa.nome + "\n"
+                + "Peso: " + pessoa.peso + "\n"
+                + "Altura: " + pessoa.altura + "\n"
+                + "dataNascimento: " + pessoa.dataNascimento + "\n"
+            );
+        } catch (Exception error) {
+            System.out.println("Erro ao cadastrar Pessoa." + error.getMessage());
+        }
         
     }
 
     public static void verificarIMC() {
+  Scanner scanner = new Scanner(System.in);
+
         
     }
 
