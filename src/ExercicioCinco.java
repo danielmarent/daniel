@@ -76,6 +76,7 @@ public class ExercicioCinco {
             double altura = scanner.nextDouble();
             System.out.println("Informe o dataNascimento:");
             String dataNascimento = scanner.next();
+            
 
             Pessoa pessoa = new Pessoa (nome,peso,altura,dataNascimento);
             System.out.println(
